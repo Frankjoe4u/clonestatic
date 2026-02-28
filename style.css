@@ -266,196 +266,229 @@ button:hover {
     margin: 0;
 }
 /*solution*/
-.solutions-section {
-    max-width: 1100px;
-    margin: 0 auto;
+.solution-section {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.solution-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
 }
 
-.solutions-section .header {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 16px;
-    margin-bottom: 50px;
+.solution-header h1 {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #150e0e;
 }
 
-.solutions-section .section-title {
-    font-size: 42px;
-    font-weight: 800;
-    color: #0f0f1a;
-    margin: 0;
-    width: 100%;
+.compare-btn {
+  display: inline-block;
+  background-color: #6919b0;
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  transition: background 0.2s ease, transform 0.2s ease;
+  align-self: center;
 }
 
-.solutions-section .section-sub {
-    font-size: 16px;
-    color: #555;
-    margin: 0;
-    flex: 1;
+.compare-btn:hover {
+  background-color: #3c2060;
+  transform: translateY(-2px);
 }
 
-.compare-link {
-    background: #7c3aed;
-    color: #fff;
-    padding: 14px 24px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 15px;
-    white-space: nowrap;
+/* @media */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: 2fr 2fr; 
+  gap: 24px;
+  align-items: start;
 }
 
-.plans-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    border-radius: 16px;
-    overflow: hidden;
+@media (max-width: 700px) {
+  .pricing-grid {
+    grid-template-columns: 1fr; 
+  }
 }
 
-.plan-card {
-    background: #eeeaf8;
-    padding: 40px;
+/* card */
+.card {
+  border-radius: 20px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.plan-card.featured {
-    background: #1a1a2e;
-    color: #fff;
+.card-light {
+  background-color: #e8eefe;
 }
 
-.plan-badge {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: #7c3aed;
-    background: #fff;
-    display: inline-block;
-    padding: 6px 12px;
-    border-radius: 6px;
-    margin-bottom: 20px;
+.card-dark {
+  background-color:  #1a1a2e;
+  color: #c3dffb;
 }
 
-.plan-card.featured .plan-badge {
-    background: #2e2e4a;
-    color: #a78bfa;
+/* badge */
+.badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 50px;
+  width: fit-content;
 }
 
-.plan-card h3 {
-    font-size: 24px;
-    font-weight: 800;
-    color: #0f0f1a;
-    margin: 0 0 12px 0;
+.badge-light {
+  border: 1.5px solid #bbb;
+  color: #323233;
+  background: transparent;
 }
 
-.plan-card.featured h3 {
-    color: #fff;
+.badge-dark {
+  border: 1.5px solid #555;
+  color: #d8d6d6;
+  background: transparent;
 }
 
-.plan-tagline {
-    font-size: 14px;
-    color: #444;
-    line-height: 1.6;
-    margin: 0 0 24px 0;
+.card h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1.2;
 }
 
-.plan-card.featured .plan-tagline {
-    color: #ccc;
+.card-light h2 {
+  color: #141414;
 }
 
-.plan-cta {
-    display: block;
-    background: #7c3aed;
-    color: #fff;
-    text-align: center;
-    padding: 14px;
-    border-radius: 8px;
-    font-weight: 700;
-    font-size: 15px;
-    text-decoration: none;
-    margin-bottom: 30px;
+.card-dark h2 {
+  color:#dfe0e3;
 }
 
-.plan-list-title {
-    font-size: 15px;
-    font-weight: 700;
-    color: #0f0f1a;
-    margin: 0 0 12px 0;
+.card-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
-.plan-card.featured .plan-list-title {
-    color: #fff;
+.card-light .card-desc {
+  color: #212121;
 }
 
-.plan-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 24px 0;
-    background: #fff;
-    border-radius: 12px;
-    padding: 20px 24px;
+.card-dark .card-desc {
+  color: #b5b5b5;
 }
 
-.plan-card.featured .plan-list {
-    background: #2e2e4a;
+/* button */
+.cta-btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 15px 20px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
-.plan-list li {
-    font-size: 14px;
-    color: #333;
-    padding: 10px 0;
-    border-bottom: 1px solid #f0f0f0;
-    padding-left: 24px;
-    position: relative;
+.cta-purple {
+  background-color: #5a3290;
+  color: #fff;
 }
 
-.plan-card.featured .plan-list li {
-    color: #ddd;
-    border-bottom: 1px solid #3a3a5a;
+.cta-purple:hover {
+  background-color: #5a3290;
+  transform: translateY(-2px);
+}
+.features-block h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 12px;
 }
 
-.plan-list li::before {
-    content: "✓";
-    color: #7c3aed;
-    position: absolute;
-    left: 0;
-    font-weight: 700;
+.card-light .features-block h3 {
+  color: #171717;
 }
 
-.plan-list li:last-child {
-    border-bottom: none;
+.card-dark .features-block h3 {
+  color:#bfc1c1;
+}
+.features-list {
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.plan-pricing {
-    background: #fff;
-    border-radius: 12px;
-    padding: 20px 24px;
-    margin-top: 10px;
+.light-list {
+  background-color: #ffffff;
 }
 
-.plan-card.featured .plan-pricing {
-    background: #2e2e4a;
+.dark-list {
+  background-color: #262647;
 }
 
-.price-label {
-    font-size: 13px;
-    font-weight: 700;
-    color: #0f0f1a;
-    margin: 0 0 6px 0;
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.88rem;
+  line-height: 1.5;
 }
 
-.plan-card.featured .price-label {
-    color: #fff;
+.card-light .feature-item {
+  color: #242425;
 }
 
-.price {
-    font-size: 14px;
-    color: #555;
-    margin: 0;
+.card-dark .feature-item {
+  color: #b4b4b6;
 }
 
-.plan-card.featured .price {
-    color: #ccc;
+.check {
+  color: #4a0186;
+  font-weight: 800;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.pricing-box {
+  border-radius: 12px;
+  padding: 18px 20px;
+  text-align: center;
+}
+
+.pricing-box strong {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.pricing-box p {
+  font-size: 0.85rem;
+}
+
+.pricing-box-light {
+  background-color: #ffffff;
+  color: #1a1432;
+}
+
+.pricing-box-dark {
+  background-color: #1e1e3c;
+  color: #ebf2f6;
+}
+
+.pricing-box-dark strong {
+  color: #e6e6ea;
 }
 
 /*TRUSTED */
@@ -519,7 +552,6 @@ button:hover {
   background: #4c1d95;
 }
 
-/* --- Cards Grid (light purple bg area) --- */
 .trusted-grid {
   background: #ede9fe;
   border-radius: 20px;
@@ -572,7 +604,6 @@ button:hover {
   font-weight: 400;
 }
 
-/* --- Logo Strip --- */
 .logos-strip {
   display: flex;
   align-items: center;
@@ -588,7 +619,6 @@ button:hover {
   opacity: 0.85;
 }
 
-/* --- Icon Boxes on Cards (if used) --- */
 .trusted-card-icon {
   display: inline-flex;
   align-items: center;
@@ -691,7 +721,6 @@ button:hover {
   line-height: 1;
 }
 
-/*Review Text*/
 .testimony-card .testimony-text {
   font-size: 14px;
   color: #374151;
@@ -700,7 +729,6 @@ button:hover {
   flex: 1;
 }
 
-/*  Author Row */
 .testimony-author {
   display: flex;
   align-items: center;
@@ -709,7 +737,6 @@ button:hover {
   padding-top: 8px;
 }
 
-/*  Author Avatar */
 .testimony-author img {
   width: 46px;
   height: 46px;
@@ -719,14 +746,11 @@ button:hover {
   background: #ddd6fe;
 }
 
-/*Author Text Block*/
 .testimony-author div {
   display: flex;
   flex-direction: column;
   gap: 3px;
 }
-
-/*Author Name*/
 .testimony-author strong {
   font-size: 14px;
   font-weight: 700;
@@ -734,8 +758,6 @@ button:hover {
   line-height: 1.3;
   display: block;
 }
-
-/*Author Role */
 .testimony-author span {
   font-size: 12px;
   color: #6b7280;
@@ -875,7 +897,7 @@ button:hover {
 
 .ready-title {
   font-size: 64px;
-  font-weight: 800;
+  font-weight: 600;
   color: #ffffff;
   line-height: 1.1;
   max-width: 780px;
